@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>אף פעם לא מאוחר לדעת</title>
+    <meta name="description" content="אינפוגרפיקה בנושא אוריינות פיננסית" />
+    <meta name="keywords" content="פרישה, פנסיה" />
+    <meta name="author" content="אניטה מלינסקי וחן שטרנין" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link href="styles/bootstrap.rtl.min.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="jScripts/bootstrap.bundle.min.js"></script>
+    <script src="jScripts/javascript.js"></script>
+
+</head>
+<body id="body" class="stop-scrolling" lang="he" dir="rtl" style="background-color:white">
+
+    <div style="color: white; height: 100vh; background-color:#524AEC" class="px-4 py-5 text-center">
+        <h1 class="display-5 fw-bold">אף פעם לא מאוחר לדעת</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">נשמח להכיר אותך, מה שמך?</p>
+            <div class="mb-2">
+                <input id="textbox" type="text" style="border-radius:6px;" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="inputGroup-sizing-sm" required>
+            </div>
+            <div class="invalid-feedback">
+              יש להזין שם בכדי להמשיך
+            </div>
+            <!--missing validation here-->
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a id="SaveName" onclick="SaveName()" style="background-color:#F6C362" type="submit" class="btn btn-primary btn-lg px-4 gap-3" href="#content"> בואו נתחיל</a>
+            </div>
+            <div class="text-center" style="margin-top:20%">
+                <img src="images/Logo.svg" />
+            </div>
+        </div>
+    </div>
+
+    <div id="content" class="visually-hidden my-3 p-3 px-4 pt-5 my-5 text-center" style="background-color: #F6C362; margin-left: auto; margin-right: auto; border-radius: 80px; height: 100%; width: 90%">
+        <h1 style="font-weight:bold"> שלום <span id="output"></span> </h1>
+        <h1> הנה כמה נתונים שחשבנו שיעניינו אותך</h1>
+        <div class="d-flex flex-row mb-3">
+            <img data-mdb-toggle="animation" data-mdb-animation="fade-in"
+                 data-mdb-animation-delay="300" data-mdb-animation-start="onClick" data-mdb-animation-on-scroll="repeat" src="images/what is pension.png" style="width: 70vh; height: auto" />
+        </div>
+        <div class="d-flex flex-row-reverse bd-highlight">
+            <img class="p-2 bd-highlight" src="images/firstanswer.png" style="width:100vh; height:auto" />
+        </div>2
+        <h1> מה המין שלך?</h1>
+        <img src="images/man.png" />
+        <img src="images/woman.png" />
+    </div>
+  
+</body>
+          </html>
