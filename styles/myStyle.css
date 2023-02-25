@@ -1,6 +1,7 @@
 ﻿
 .scrollable-place {
     height: 100vh;
+    /*overflow: auto;*/
     scroll-behavior: smooth
 }
 

@@ -20,19 +20,17 @@
 </head>
 <body id="body" class="stop-scrolling" lang="he" dir="rtl" style="background-color:white">
 
-    <div style="color: white; height: 100vh; background-color:#524AEC" class="px-4 py-5 text-center">
+    <div id="Cover" style="color: white; height: 100vh; background-color:#524AEC" class="px-4 py-5 text-center">
         <h1 class="display-5 fw-bold">אף פעם לא מאוחר לדעת</h1>
         <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">נשמח להכיר אותך, מה שמך?</p>
             <div class="mb-2">
-                <input id="textbox" type="text" style="border-radius:6px;" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="inputGroup-sizing-sm" required>
+                <input id="textbox" type="text" style="border-radius:6px;" class="form-control" aria-label="Username" aria-describedby="inputGroup-sizing-sm" required>
             </div>
-            <div class="invalid-feedback">
-              יש להזין שם בכדי להמשיך
+            <div id="feedback">
             </div>
-            <!--missing validation here-->
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <a id="SaveName" onclick="SaveName()" style="background-color:#F6C362" type="submit" class="btn btn-primary btn-lg px-4 gap-3" href="#content"> בואו נתחיל</a>
+                <button id="SaveName" onclick="SaveName()" style="background-color:#F6C362" type="submit" class="btn btn-primary btn-lg px-4 gap-3"> בואו נתחיל</button>
             </div>
             <div class="text-center" style="margin-top:20%">
                 <img src="images/Logo.svg" />
@@ -48,12 +46,15 @@
                  data-mdb-animation-delay="300" data-mdb-animation-start="onClick" data-mdb-animation-on-scroll="repeat" src="images/what is pension.png" style="width: 70vh; height: auto" />
         </div>
         <div class="d-flex flex-row-reverse bd-highlight">
-            <img class="p-2 bd-highlight" src="images/firstanswer.png" style="width:100vh; height:auto" />
-        </div>2
-        <h1> מה המין שלך?</h1>
-        <img src="images/man.png" />
-        <img src="images/woman.png" />
+            <img class="p-2 bd-highlight" src="images/firstanswer.png" alt="מהי קרן פנסיה?" style="width:100vh; height:auto" />
+        </div>
+        <h1> אנא בחר/י את המין שלך?</h1>
+        <img onclick="Man()" src="images/man.png" />
+        <img onclick="Woman()" src="images/woman.png" />
+        <div class="d-flex flex-row-reverse bd-highlight">
+            <img class="p-2 bd-highlight" src="images/firstanswer.png" alt="מהי קרן פנסיה?" style="width:100vh; height:auto" />
+        </div>
     </div>
-  
+    
 </body>
           </html>
