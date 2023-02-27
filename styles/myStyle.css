@@ -1,14 +1,60 @@
-﻿
+﻿.container {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+
+    .container::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+    }
+
 .scrollable-place {
     height: 100vh;
-    /*overflow: auto;*/
-    scroll-behavior: smooth
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+    .scrollable-place::-webkit-scrollbar {
+        display: none;
+    }
+
+.visability{
+    visibility: visible;
+}
+
+.scrollable-place {
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
 .stop-scrolling {
     height: 100vh;
     overflow: hidden;
 }
+
+/*placing the element in place and scaling*/
+/*.msgrightshort {
+    visibility: hidden;
+    transform: translateX(36vw) scale(0.1);
+    transition: 0.6s all ease;
+    transition-delay: 0.25s
+}*/
+    /*moving the element in place*/
+    /*.msgrightshort.active {
+       visibility: visible;
+       transform: translateX(40vw) scale(1);
+    }
+
+.revealleft {
+    visibility: hidden;
+    transform: translateX(-40vw) scale(0.1);
+    transition: 0.6s all ease;
+    transition-delay: 1s
+}
+    .revealleft.active {
+        visibility: visible;
+        transform: translateX(-20vw) scale(1);
+    }*/
+
 
 h1 {
     color: white;
@@ -18,6 +64,30 @@ h1 {
 }
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
+        .right {
+            width: 76vw;
+        }
+        .left{
+            width: 70vw;
+        }
+        .msgrightshort.active {
+            visibility: visible;
+            transform: translateX(17vw) scale(1);
+        }
+        .revealleft {
+            visibility: hidden;
+            transform: translateX(-20vw) scale(0.1);
+            transition: 0.6s all ease;
+            transition-delay: 1s
+        }
+
+            .revealleft.active {
+                visibility: visible;
+                transform: translateX(-9vw) scale(1);
+            }
+        .ContectContainer{
+            border-radius: 20px;
+        }
     }
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) {
@@ -27,7 +97,116 @@ h1 {
     }
     /* Large devices (laptops/desktops, 992px and up) */
     @media only screen and (min-width: 992px) {
+        .msgrightshort {
+            visibility: hidden;
+            transform: translateX(40vw) scale(0.05);
+            transition: 0.6s all ease;
+            transition-delay: 0.25s;
+            width: 40vw;
+        }
+
+            .msgrightshort.active {
+                visibility: visible;
+                transform: translateX(25vw) scale(1);
+            }
+
+        .msgrightlong {
+            visibility: hidden;
+            transform: translateX(40vw) scale(0.05);
+            transition: 0.6s all ease;
+            transition-delay: 0.25s;
+            width: 60vw;
+        }
+
+        .msgrightslong.active {
+            visibility: visible;
+            transform: translateX(0vw) scale(1);
+        }
+/*        .right {
+            width: 40vw;
+        }
+
+        .left {
+            width: 50vw;
+        }
+
+        .msgrightshort.active {
+            visibility: visible;
+            transform: translateX(28vw) scale(1);
+        }
+       
+        .revealleft {
+            visibility: hidden;
+            transform: translateX(-40vw) scale(0.1);
+            transition: 0.6s all ease;
+            transition-delay: 1s
+        }
+
+            .revealleft.active {
+                visibility: visible;
+                transform: translateX(-20vw) scale(1);
+            }
+*/
+        .ContectContainer {
+            border-radius: 80px;
+        }
     }
     /* Extra large devices (large laptops and desktops, 1200px and up) */
-    @media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
+
+  /*  RIGHT*/
+
+    .msgrightshort {
+        visibility: hidden;
+        transform: translateX(40vw) scale(0.05);
+        transition: 0.6s all ease;
+        transition-delay: 0.25s;
+        width: 40vw;
     }
+
+        .msgrightshort.active {
+            visibility: visible;
+            transform: translateX(25vw) scale(1);
+        }
+
+
+    .msgrightlong {
+        visibility: hidden;
+        transform: translateX(40vw) scale(0.1);
+        transition: 0.6s all ease;
+        transition-delay: 0.25s;
+        width: 80vw;
+    }
+
+        .msgrightlong.active {
+            visibility: visible;
+            transform: translateX(4.5vw) scale(1);
+        }
+
+    /*  lEFT*/
+
+    .revealleft {
+        visibility: hidden;
+        transform: translateX(-20vw) scale(0.1);
+        transition: 0.6s all ease;
+        transition-delay: 1s
+    }
+
+        .revealleft.active {
+            visibility: visible;
+            transform: translateX(-1vw) scale(1);
+        }
+
+    .revealleftHigh {
+        visibility: hidden;
+        transform: translateX(-30vw) scale(0.1);
+        transition: 0.6s all ease;
+        transition-delay: 1s;
+        width: 50vw;
+    }
+
+        .revealleftHigh.active {
+            visibility: visible;
+            transform: translateX(-20vw) scale(1);
+        }
+}

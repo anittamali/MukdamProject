@@ -28,32 +28,81 @@
                 <input id="textbox" type="text" style="border-radius:6px;" class="form-control" aria-label="Username" aria-describedby="inputGroup-sizing-sm" required>
             </div>
             <div id="feedback">
+                <span style="visibility:hidden" id="msg"> יש להזין שם  </span>
             </div>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <button id="SaveName" onclick="SaveName()" style="background-color:#F6C362" type="submit" class="btn btn-primary btn-lg px-4 gap-3"> בואו נתחיל</button>
+                <button id="SaveName" onclick="SaveName()" style="background-color:#F6C362" class="btn btn-primary btn-lg px-4 gap-3"> בואו נתחיל</button>
             </div>
             <div class="text-center" style="margin-top:20%">
                 <img src="images/Logo.svg" />
             </div>
         </div>
     </div>
+    <!--TODO- Size of text's, mobile fit, creat one more class, button is jumping, Gender, refresh bug--> 
+    <div id="content" class="ContectContainer visually-hidden my-3 p-3 px-4 pt-5 my-5 text-center" style="background-color: #F6C362; margin-left: auto; margin-right: auto; height: 1000vh; width: 90%">
+        <h1 style="font-weight:bold; font-size:2rem;"> שלום <span id="output"></span> </h1>
+        <h1 style="font-size:1.5rem;"> הנה כמה נתונים שחשבנו שיעניינו אותך</h1>
+        <div class="d-flex flex-row-reverse bd-highlight">
+            <img class="container msgrightshort right" src="images/what is pension.png" alt="מהי קרן פנסיה?" style="height: auto; margin-top:5vh;" />
+        </div>
+        <div class="d-flex flex-row-reverse bd-highlight">
+            <img class="container revealleftHigh" src="images/firstanswernew.png" alt="קרן פנסיה הסבר" style="height: auto; margin-top: 5vh" />
+        </div>
 
-    <div id="content" class="visually-hidden my-3 p-3 px-4 pt-5 my-5 text-center" style="background-color: #F6C362; margin-left: auto; margin-right: auto; border-radius: 80px; height: 100%; width: 90%">
-        <h1 style="font-weight:bold"> שלום <span id="output"></span> </h1>
-        <h1> הנה כמה נתונים שחשבנו שיעניינו אותך</h1>
-        <div class="d-flex flex-row mb-3">
-            <img data-mdb-toggle="animation" data-mdb-animation="fade-in"
-                 data-mdb-animation-delay="300" data-mdb-animation-start="onClick" data-mdb-animation-on-scroll="repeat" src="images/what is pension.png" style="width: 70vh; height: auto" />
+        <!--<div class="col-4" style=" transition-delay: 1s;">
+        <img class="container msgrightshort right" src="images/Gender.png" alt="מהו המין שלך" style="height: auto; margin-top:5vh; margin-right:25vw; width:75vw;" />
+        <div>-->
+        <div class="col-4 container msgrightshort right" style=" transition-delay: 1s; background-image: images/Gender.png">
+            src="images/Gender.png" alt="מהו המין שלך" style="height: auto; margin-top:5vh; margin-right:25vw; width:75vw;" />
+            <div>
+                <img id="man" onclick="man()" alt="גבר" src="images/man.png" />
+                <img id="woman" onclick="woman()" alt="אישה" src="images/woman.png" />
+            </div>
+        </div>
+        <div style="margin-bottom:5vh" id="DynamicImg" class="d-flex flex-row-reverse bd-highlight">
+
         </div>
         <div class="d-flex flex-row-reverse bd-highlight">
-            <img class="p-2 bd-highlight" src="images/firstanswer.png" alt="מהי קרן פנסיה?" style="width:100vh; height:auto" />
+            <img class="container msgrightshort right" src="images/WhatIsRetairment.png" alt="מהו מסלול פרישה?" style="height: auto; margin-top: 5vh" />
         </div>
-        <h1> אנא בחר/י את המין שלך?</h1>
-        <img onclick="Man()" src="images/man.png" />
-        <img onclick="Woman()" src="images/woman.png" />
         <div class="d-flex flex-row-reverse bd-highlight">
-            <img class="p-2 bd-highlight" src="images/firstanswer.png" alt="מהי קרן פנסיה?" style="width:100vh; height:auto" />
+            <img class="container revealleft left" src="images/RetairmentAnswer.png" alt="מסלול פרישה הסבר" style="height: auto; margin-top: 5vh" />
         </div>
+
+        <div class="d-flex flex-row-reverse bd-highlight">
+            <img class="container msgrightlong" src="images/Reasons.png" alt="מה משפיע על גובה הקצבה?" style="height: auto; margin-top: 5vh" />
+        </div>
+        <div class="d-flex flex-row-reverse bd-highlight">
+            <img class="container revealleftHigh" src="images/ReasonsAnswer.png" alt="גורמים שמשפיעים על גובה הקצבה הסבר" style="height: auto; margin-top: 5vh; width:40vw;" />
+        </div>
+        <div class="d-flex flex-row-reverse bd-highlight">
+            <img class="container msgrightlong" src="images/Note.png" alt="מהם שיקולים לבחירת מסלול פרישה?" style="height: auto; margin-top: 5vh" />
+        </div>
+        <div class="d-flex flex-row-reverse bd-highlight">
+            <img class="container revealleftHigh" src="images/NoteAnswer.png" alt="השיקולים בבחירת מסלול פרישה" style="height: auto; margin-top: 5vh" />
+        </div>
+        <div class="d-flex flex-row-reverse bd-highlight">
+            <img class="container msgrightshort" src="images/WhatToDo.png" alt="מה עליי לעשות כרגע?" style="height: auto; margin-top: 5vh" />
+        </div>
+        <div class="d-flex flex-row-reverse bd-highlight">
+            <img class="container revealleftHigh" src="images/WhatToDoAnswer1.png" alt="לברר היכן נמצאים הכספים" style="height: auto; margin-top: 5vh" />
+        </div>
+        <div class="d-flex flex-row-reverse bd-highlight">
+            <img class="container revealleftHigh" src="images/WhatToDoAnswer2.png" alt="לבחור מסלול פנסיוני" style="height: auto; margin-top: 5vh" />
+        </div>
+        <div class="d-flex flex-row-reverse bd-highlight">
+            <img class="container revealleftHigh" src="images/WhatToDoAnswer3.png" alt="תכנון פנסיוני לטווח ארוך" style="height: auto; margin-top: 5vh" />
+        </div>
+        <div class="d-flex flex-row-reverse bd-highlight">
+            <img class="container revealleftHigh" src="images/WhatToDoAnswer4.png" alt="להנות מהפ" style="height: auto; margin-top: 5vh" />
+        </div>
+        
+            <h3 style="color:brown"> WhatsApp sharing Link </h3>
+            <!-- create a link using anchor tab -->
+            <a href="whatsapp://send?text=http://localhost:50483/index.html" data-action="share/whatsapp/share"
+               target="_blank"> Share to WhatsApp </a>
+
+
     </div>
     
 </body>
