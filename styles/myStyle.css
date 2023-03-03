@@ -52,6 +52,12 @@ h1 {
     font-weight: 300
 }
 
+.btn btn-primary btn-lg px-4 gap-3:hover {
+background-color: #4CAF50; /* Green */
+color: white;
+}
+
+
 /* Right side messages styles */
 
 .msgrightshort {
@@ -148,13 +154,24 @@ h1 {
             background-image: url('../images/BGSmall.png');
             background-size: cover;
         }
-
+        h2 {
+            color: white;
+            text-align: center;
+            font-size: 0.75rem;
+            font-weight: 300
+        }
     }
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) {
         .BGimg {
             background-image: url('../images/BGSmall.png');
             background-size: cover;
+        }
+        h2 {
+            color: white;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 300
         }
     }
     /* Medium devices (landscape tablets, 768px and up) */
@@ -163,12 +180,24 @@ h1 {
             background-image: url('../images/BG.png');
             background-size: cover;
         }
+        h2 {
+            color: white;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 300
+        }
     }
     /* Large devices (laptops/desktops, 992px and up) */
     @media only screen and (min-width: 992px) {
         .BGimg {
             background-image: url('../images/BG.png');
             background-size: cover;
+        }
+        h2 {
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 300
         }
     }
     /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -177,6 +206,12 @@ h1 {
     .BGimg {
         background-image: url('../images/BG.png');
         background-size: cover;
+    }
+    h2 {
+        color: white;
+        text-align: center;
+        font-size: 2.25rem;
+        font-weight: 300
     }
 
 }

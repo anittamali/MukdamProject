@@ -48,7 +48,6 @@ function woman() {
     function reveal() {
         var reveals = document.querySelectorAll([".msgrightshort", ".msgrightlong", ".revealleftS", ".revealleftM", ".revealleftL", ".msgGender"]);
         for (var i = 0; i < reveals.length; i++) {
-            if (reveals[i].classList.contains('msgGender')) {console.log("TRANSGENDER PARTY") }
             var windowHeight = window.innerHeight;
             var elementTop = reveals[i].getBoundingClientRect().top;
             var elementVisible = 50;
