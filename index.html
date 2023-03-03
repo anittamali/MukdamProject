@@ -7,7 +7,7 @@
     <meta name="description" content="אינפוגרפיקה בנושא אוריינות פיננסית" />
     <meta name="keywords" content="פרישה, פנסיה" />
     <meta name="author" content="אניטה מלינסקי וחן שטרנין" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name=”viewport” content="width=device-width, initial-scale=1"/>
 
     <!-- CSS -->
     <link href="styles/bootstrap.rtl.min.css" rel="stylesheet" />
@@ -16,12 +16,13 @@
     <!-- JS -->
     <script src="jScripts/bootstrap.bundle.min.js"></script>
     <script src="jScripts/javascript.js"></script>
-
-    <script>history.scrollRestoration = "manual"</script>
+    <script>history.scrollRestoration = "manual" </script>
 </head>
-<body id="body" class="stop-scrolling BGimg" lang="he" dir="rtl">
 
-    <div id="Cover" style="color: white; height: 100vh; background-color:#524AEC" class="px-4 py-5 text-center">
+<body id="body" class="stop-scrolling BGimg " lang="he" dir="rtl">
+
+    <div id="Cover" style="color: white; height: 100vh; background-color: #524AEC;" class="px-3 py-5 text-center">
+        
         <h1 class="display-5 fw-bold">אף פעם לא מאוחר לדעת</h1>
         <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">נשמח להכיר אותך, מה שמך?</p>
@@ -31,7 +32,6 @@
             </div>
             <div id="feedback">
                 <span class="visabilityHidden" id="msg"> יש להזין שם </span>
-             
             </div>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <button id="SaveName" onclick="SaveName()" style="background-color:#F6C362" class="btn btn-primary btn-lg px-4 gap-3"> בואו נתחיל</button>
@@ -42,11 +42,11 @@
         </div>
     </div>
     <!--TODO- Size of text's, mobile fit, creat one more class, button is jumping, Gender, refresh bug--> 
-    <div id="content" class="ContectContainer visually-hidden my-3 p-3 px-4 pt-5 my-5 text-center" style="background-color: #F6C362; margin-left: auto; margin-right: auto; width: 90%">
+    <div id="content" class="visually-hidden p-3 px-4 pt-5 text-center" style="background-color: #F6C362; margin-left: auto; margin-right: auto; width: 90%; margin-bottom: 0; margin-top: 5%; border-radius: 10vw 10vw 0px 0px; ">
         <h1 style="font-weight:bold; font-size:2rem;"> שלום <span id="output"></span> </h1>
         <h1 style="font-size:1.5rem;"> הנה כמה נתונים שחשבנו שיעניינו אותך</h1>
         <div class="d-flex flex-row-reverse bd-highlight">
-            <img class="container msgrightshort right" src="images/what is pension.png" alt="מהי קרן פנסיה?" style="height: auto; margin-top:5vh;" />
+            <img class="container msgrightshort right" src="images/what is pension.png" alt="מהי קרן פנסיה?" style="height: auto; margin-top: 5vh; transition-delay: 0.5s " />
         </div>
         <div class="d-flex flex-row-reverse bd-highlight">
             <img class="container revealleftM" src="images/firstanswernew.png" alt="קרן פנסיה הסבר" style="height: auto; margin-top: 5vh" />
@@ -59,19 +59,18 @@
             </div>
         </div>
      </div>
-        <div id="selectgender" class="visually-hidden" style="display:none">
-            <div style="margin-bottom:5vh;" id="DynamicImg" class="genchoice d-flex ">
-
+        <div id="content2" class="visually-hidden p-3 px-4 pt-5 text-center" style="background-color: #F6C362; margin-left: auto; margin-right: auto; margin-bottom: 5%; width: 90%; border-radius: 0px 0px 10vw 10vw; ">
+            <div id="DynamicImg" class="d-flex flex-wrap flex-row-reverse bd-highlight">
+                <img id="manage" class="visabilityHidden2" onclick="man()" alt="גבר" src="images/ManAge.png" style="width:75vw"/>
+                <img id="womanage" class="visabilityHidden2" onclick="woman()" alt="אישה" src="images/WomanAge.png" style="width:75vw"/>
 
             </div>
-
             <div class="d-flex flex-row-reverse bd-highlight" style="transition-delay: 2s;">
                 <img class="container msgrightshort" src="images/WhatIsRetairment.png" alt="מהו מסלול פרישה?" style="height: auto; margin-top: 5vh" />
             </div>
             <div class="d-flex flex-row-reverse bd-highlight">
                 <img class="container revealleftL" src="images/RetairmentAnswer.png" alt="מסלול פרישה הסבר" style="height: auto; margin-top: 5vh" />
             </div>
-
             <div class="d-flex flex-row-reverse bd-highlight">
                 <img class="container msgrightlong" src="images/Reasons.png" alt="מה משפיע על גובה הקצבה?" style="height: auto; margin-top: 5vh" />
             </div>
@@ -106,6 +105,6 @@
                target="_blank"> <img style="width:25vw; height:auto" src="images/Share.png" /> </a>
 
         </div>
-    </div>
+   <div style="height:5vh;"> </div>
 </body>
           </html>

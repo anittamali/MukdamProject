@@ -26,33 +26,23 @@ function SaveName()
 
 var firstTime = false;
 function man() {
-    if (firstTime == true) {
-        var olddata = document.getElementById("DynamicImg").lastChild;
-        document.getElementById("DynamicImg").removeChild(olddata);
-        firstTime = false;
-    }
-    if (firstTime == false) {
-        var img = document.createElement('img');
-        img.src = "images/ManAge.png";
-        document.getElementById('DynamicImg').appendChild(img);
-        firstTime = true
-    }
+    var self = document.getElementById("manage");
+    self.classList.remove("visabilityHidden2");
+    self.classList.add("visabilityVisible2");
+    var other = document.getElementById("womanage");
+    other.classList.add("visabilityHidden2");
+    other.classList.remove("visabilityVisible2");
+    document.getElementById("content2").classList.remove("visually-hidden");
     }
 
 function woman() {
-    console.loge("SS")
-    if (firstTime == true) {
-
-        var olddata = document.getElementById("DynamicImg").lastChild;
-        document.getElementById("DynamicImg").removeChild(olddata);
-        firstTime = false;
-    }
-    if (firstTime == false) {
-        var img = document.createElement('img');
-        img.src = "images/WomanAge.png";
-        document.getElementById('DynamicImg').appendChild(img);
-        firstTime = true
-    }
+    var self = document.getElementById("womanage");
+    self.classList.remove("visabilityHidden2");
+    self.classList.add("visabilityVisible2");
+    var other = document.getElementById("manage");
+    other.classList.add("visabilityHidden2");
+    other.classList.remove("visabilityVisible2");
+    document.getElementById("content2").classList.remove("visually-hidden");
 }
 
     function reveal() {
@@ -69,12 +59,6 @@ function woman() {
             }
         }
     }
-
     window.addEventListener("scroll", reveal);
-
     // To check the scroll position on page load
     reveal();
-
-
-
-

@@ -1,4 +1,5 @@
-﻿.container {
+﻿
+.container {
     -ms-overflow-style: none; /* Internet Explorer 10+ */
     scrollbar-width: none; /* Firefox */
 }
@@ -19,11 +20,21 @@
 
 .visabilityHidden {
     visibility: hidden;
+ 
 }
 .visabilityVisible {
     visibility: visible !important;
 }
 
+.visabilityHidden2 {
+    visibility: hidden;
+    display: None;
+}
+
+.visabilityVisible2 {
+    visibility: visible !important;
+    display: inline;
+}
 .scrollable-place {
     -ms-overflow-style: none; /* Internet Explorer and Edge */
     scrollbar-width: none; /* Firefox */
@@ -47,7 +58,7 @@ h1 {
     visibility: hidden;
     transform: translateX(40vw) scale(0.05);
     transition: 0.6s all ease;
-    transition-delay: 0.25s;
+    transition-delay: 0.55s;
     width: 40vw;
 }
 
@@ -60,7 +71,7 @@ h1 {
     visibility: hidden;
     transform: translateX(40vw) scale(0.1);
     transition: 0.6s all ease;
-    transition-delay: 0.25s;
+    transition-delay: 0.55s;
     width: 80vw;
 }
 .msgrightlong.active {
@@ -70,7 +81,7 @@ h1 {
 
 .msgGender {
     visibility: hidden;
-    transform: translateX(40vw) scale(0.1);
+    transform: translateX(20vw) scale(0.1);
     transition: 0.6s all ease;
     transition-delay: 0.25s;
 }
@@ -130,78 +141,34 @@ h1 {
         transform: translateX(-7vw) scale(1);
     }
 
-/* Gender images */
-    /*.manProp {
-        width: auto;
-        height: inherit;
-    }
-
-    .womanProp {
-        width: auto;
-        height: inherit;
-    }*/
-
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
-        /*.manProp {
-            width: 10vw;
-            height: 5vh;
-        }
-        .womanProp {
-            width: 10vw;
-            height: 5vh;
-        }*/
-        .photos {
-            position: absolute;
-            bottom: 1.2799999999999994vh;
-            left: 41%;
-            justify-content: center;
-            visibility: hidden;
-        }
-        .ContectContainer {
-            height: 220vh;
-        }
+
         .BGimg {
             background-image: url('../images/BGSmall.png');
             background-size: cover;
         }
-        /*.right {
-            width: 76vw;
-        }
-        .left{
-            width: 70vw;
-        }
-        .msgrightshort.active {
-            visibility: visible;
-            transform: translateX(17vw) scale(1);
-        }
-        .revealleft {
-            visibility: hidden;
-            transform: translateX(-20vw) scale(0.1);
-            transition: 0.6s all ease;
-            transition-delay: 1s
-        }
 
-            .revealleft.active {
-                visibility: visible;
-                transform: translateX(-9vw) scale(1);
-            }
-        .ContectContainer{
-            border-radius: 20px;
-        }*/
     }
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) {
+        .BGimg {
+            background-image: url('../images/BGSmall.png');
+            background-size: cover;
+        }
     }
     /* Medium devices (landscape tablets, 768px and up) */
     @media only screen and (min-width: 768px) {
+        .BGimg {
+            background-image: url('../images/BG.png');
+            background-size: cover;
+        }
     }
     /* Large devices (laptops/desktops, 992px and up) */
     @media only screen and (min-width: 992px) {
-
-
-        .ContectContainer {
-            border-radius: 80px;
+        .BGimg {
+            background-image: url('../images/BG.png');
+            background-size: cover;
         }
     }
     /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -212,14 +179,4 @@ h1 {
         background-size: cover;
     }
 
-    /*.photos {
-        position: absolute;
-        bottom: 9.28vh;
-        left: 41%;
-        justify-content: center;
-        visibility: hidden;
-    }*/
-    .ContectContainer {
-        height: 600vh;
-    }
 }
