@@ -1,6 +1,6 @@
 ﻿document.addEventListener("DOMContentLoaded", function (event) { });
 
-
+//saves the name of the user
 function SaveName()
 {
     document.getElementById("output").innerHTML = " ";
@@ -10,17 +10,21 @@ function SaveName()
         document.getElementById("body").classList.remove("stop-scrolling");
         document.getElementById("body").classList.add("scrollable-place");
         document.getElementById("output").innerHTML += usersname;
+        document.getElementById("msg").classList.remove("visabilityVisible");
+        document.getElementById("msg").classList.add("visabilityHidden");
         const element = document.getElementById("content");
         element.scrollIntoView(true);
-        document.getElementById("msg").value = "בדיקה";
+ 
     }
     else {
-        document.getElementById("msg").classList.add("visability");
+        document.getElementById("msg").classList.remove("visabilityHidden");
+        document.getElementById("msg").classList.add("visabilityVisible");
     }
 }
+
+
+
 var firstTime = false;
-
-
 function man() {
     if (firstTime == true) {
         var olddata = document.getElementById("DynamicImg").lastChild;
@@ -36,6 +40,7 @@ function man() {
     }
 
 function woman() {
+    console.loge("SS")
     if (firstTime == true) {
 
         var olddata = document.getElementById("DynamicImg").lastChild;
@@ -51,12 +56,12 @@ function woman() {
 }
 
     function reveal() {
-        var reveals = document.querySelectorAll([".msgrightshort", ".msgrightlong", ".revealleft", ".revealleftHigh"]);
+        var reveals = document.querySelectorAll([".msgrightshort", ".msgrightlong", ".revealleftS", ".revealleftM", ".revealleftL", ".msgGender"]);
         for (var i = 0; i < reveals.length; i++) {
-            if (reveals[i].width == 0) {console.log("dfd") }
+            if (reveals[i].classList.contains('msgGender')) {console.log("TRANSGENDER PARTY") }
             var windowHeight = window.innerHeight;
             var elementTop = reveals[i].getBoundingClientRect().top;
-            var elementVisible = 150;
+            var elementVisible = 50;
             if (elementTop < windowHeight - elementVisible) {
                 reveals[i].classList.add("active");
             } else {

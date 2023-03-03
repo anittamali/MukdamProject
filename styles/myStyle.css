@@ -13,12 +13,15 @@
     scroll-behavior: smooth;
 }
 
-    .scrollable-place::-webkit-scrollbar {
-        display: none;
-    }
+.scrollable-place::-webkit-scrollbar {
+    display: none;
+}
 
-.visability{
-    visibility: visible;
+.visabilityHidden {
+    visibility: hidden;
+}
+.visabilityVisible {
+    visibility: visible !important;
 }
 
 .scrollable-place {
@@ -31,40 +34,138 @@
     overflow: hidden;
 }
 
-/*placing the element in place and scaling*/
-/*.msgrightshort {
-    visibility: hidden;
-    transform: translateX(36vw) scale(0.1);
-    transition: 0.6s all ease;
-    transition-delay: 0.25s
-}*/
-    /*moving the element in place*/
-    /*.msgrightshort.active {
-       visibility: visible;
-       transform: translateX(40vw) scale(1);
-    }
-
-.revealleft {
-    visibility: hidden;
-    transform: translateX(-40vw) scale(0.1);
-    transition: 0.6s all ease;
-    transition-delay: 1s
-}
-    .revealleft.active {
-        visibility: visible;
-        transform: translateX(-20vw) scale(1);
-    }*/
-
-
 h1 {
     color: white;
     text-align: center;
     font-size: 1.25rem;
     font-weight: 300
 }
+
+/* Right side messages styles */
+
+.msgrightshort {
+    visibility: hidden;
+    transform: translateX(40vw) scale(0.05);
+    transition: 0.6s all ease;
+    transition-delay: 0.25s;
+    width: 40vw;
+}
+
+.msgrightshort.active {
+        visibility: visible;
+        transform: translateX(25vw) scale(1);
+}
+
+.msgrightlong {
+    visibility: hidden;
+    transform: translateX(40vw) scale(0.1);
+    transition: 0.6s all ease;
+    transition-delay: 0.25s;
+    width: 80vw;
+}
+.msgrightlong.active {
+        visibility: visible;
+        transform: translateX(4.5vw) scale(1);
+}
+
+.msgGender {
+    visibility: hidden;
+    transform: translateX(40vw) scale(0.1);
+    transition: 0.6s all ease;
+    transition-delay: 0.25s;
+}
+    .msgGender.active {
+        transform: translateX(0vw) scale(1);
+        bottom: 5%;
+        visibility: visible;
+        height: 60%;
+        width: 100%;
+        position: absolute;
+        align-items: flex-end;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+.genpic{
+    max-height: 70%;
+    width: auto;
+}
+
+.genchoice {
+    width: 100vw;
+ }
+
+/* Left side messages styles */
+.revealleftM {
+    visibility: hidden;
+    transform: translateX(-35vw) scale(0.05);
+    transition: 0.7s all ease;
+    transition-delay: 0.75s;
+    width: 50vw;
+}
+.revealleftM.active {
+        visibility: visible;
+        transform: translateX(-19vw) scale(1);
+}
+.revealleftS {
+    visibility: hidden;
+    transform: translateX(-30vw) scale(0.1);
+    transition: 0.6s all ease;
+    transition-delay: 0.75s;
+    width: 50vw;
+}
+.revealleftS.active {
+        visibility: visible;
+        transform: translateX(-24vw) scale(1);
+}
+.revealleftL {
+    visibility: hidden;
+    transform: translateX(-30vw) scale(0.1);
+    transition: 0.6s all ease;
+    transition-delay: 0.75s;
+    width: 75vw;
+}
+.revealleftL.active {
+        visibility: visible;
+        transform: translateX(-7vw) scale(1);
+    }
+
+/* Gender images */
+    /*.manProp {
+        width: auto;
+        height: inherit;
+    }
+
+    .womanProp {
+        width: auto;
+        height: inherit;
+    }*/
+
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
-        .right {
+        /*.manProp {
+            width: 10vw;
+            height: 5vh;
+        }
+        .womanProp {
+            width: 10vw;
+            height: 5vh;
+        }*/
+        .photos {
+            position: absolute;
+            bottom: 1.2799999999999994vh;
+            left: 41%;
+            justify-content: center;
+            visibility: hidden;
+        }
+        .ContectContainer {
+            height: 220vh;
+        }
+        .BGimg {
+            background-image: url('../images/BGSmall.png');
+            background-size: cover;
+        }
+        /*.right {
             width: 76vw;
         }
         .left{
@@ -87,7 +188,7 @@ h1 {
             }
         .ContectContainer{
             border-radius: 20px;
-        }
+        }*/
     }
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) {
@@ -97,56 +198,8 @@ h1 {
     }
     /* Large devices (laptops/desktops, 992px and up) */
     @media only screen and (min-width: 992px) {
-        .msgrightshort {
-            visibility: hidden;
-            transform: translateX(40vw) scale(0.05);
-            transition: 0.6s all ease;
-            transition-delay: 0.25s;
-            width: 40vw;
-        }
 
-            .msgrightshort.active {
-                visibility: visible;
-                transform: translateX(25vw) scale(1);
-            }
 
-        .msgrightlong {
-            visibility: hidden;
-            transform: translateX(40vw) scale(0.05);
-            transition: 0.6s all ease;
-            transition-delay: 0.25s;
-            width: 60vw;
-        }
-
-        .msgrightslong.active {
-            visibility: visible;
-            transform: translateX(0vw) scale(1);
-        }
-/*        .right {
-            width: 40vw;
-        }
-
-        .left {
-            width: 50vw;
-        }
-
-        .msgrightshort.active {
-            visibility: visible;
-            transform: translateX(28vw) scale(1);
-        }
-       
-        .revealleft {
-            visibility: hidden;
-            transform: translateX(-40vw) scale(0.1);
-            transition: 0.6s all ease;
-            transition-delay: 1s
-        }
-
-            .revealleft.active {
-                visibility: visible;
-                transform: translateX(-20vw) scale(1);
-            }
-*/
         .ContectContainer {
             border-radius: 80px;
         }
@@ -154,59 +207,19 @@ h1 {
     /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
-  /*  RIGHT*/
-
-    .msgrightshort {
-        visibility: hidden;
-        transform: translateX(40vw) scale(0.05);
-        transition: 0.6s all ease;
-        transition-delay: 0.25s;
-        width: 40vw;
+    .BGimg {
+        background-image: url('../images/BG.png');
+        background-size: cover;
     }
 
-        .msgrightshort.active {
-            visibility: visible;
-            transform: translateX(25vw) scale(1);
-        }
-
-
-    .msgrightlong {
+    /*.photos {
+        position: absolute;
+        bottom: 9.28vh;
+        left: 41%;
+        justify-content: center;
         visibility: hidden;
-        transform: translateX(40vw) scale(0.1);
-        transition: 0.6s all ease;
-        transition-delay: 0.25s;
-        width: 80vw;
+    }*/
+    .ContectContainer {
+        height: 600vh;
     }
-
-        .msgrightlong.active {
-            visibility: visible;
-            transform: translateX(4.5vw) scale(1);
-        }
-
-    /*  lEFT*/
-
-    .revealleft {
-        visibility: hidden;
-        transform: translateX(-20vw) scale(0.1);
-        transition: 0.6s all ease;
-        transition-delay: 1s
-    }
-
-        .revealleft.active {
-            visibility: visible;
-            transform: translateX(-1vw) scale(1);
-        }
-
-    .revealleftHigh {
-        visibility: hidden;
-        transform: translateX(-30vw) scale(0.1);
-        transition: 0.6s all ease;
-        transition-delay: 1s;
-        width: 50vw;
-    }
-
-        .revealleftHigh.active {
-            visibility: visible;
-            transform: translateX(-20vw) scale(1);
-        }
 }

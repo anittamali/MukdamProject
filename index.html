@@ -17,18 +17,21 @@
     <script src="jScripts/bootstrap.bundle.min.js"></script>
     <script src="jScripts/javascript.js"></script>
 
+    <script>history.scrollRestoration = "manual"</script>
 </head>
-<body id="body" class="stop-scrolling" lang="he" dir="rtl" style="background-color:white">
+<body id="body" class="stop-scrolling BGimg" lang="he" dir="rtl">
 
     <div id="Cover" style="color: white; height: 100vh; background-color:#524AEC" class="px-4 py-5 text-center">
         <h1 class="display-5 fw-bold">אף פעם לא מאוחר לדעת</h1>
         <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">נשמח להכיר אותך, מה שמך?</p>
             <div class="mb-2">
-                <input id="textbox" type="text" style="border-radius:6px;" class="form-control" aria-label="Username" aria-describedby="inputGroup-sizing-sm" required>
+
+                <input id="textbox" type="text" style="border-radius:6px;" aria-label="Username" class="form-control" aria-describedby="inputGroup-sizing-sm" required>
             </div>
             <div id="feedback">
-                <span style="visibility:hidden" id="msg"> יש להזין שם  </span>
+                <span class="visabilityHidden" id="msg"> יש להזין שם </span>
+             
             </div>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <button id="SaveName" onclick="SaveName()" style="background-color:#F6C362" class="btn btn-primary btn-lg px-4 gap-3"> בואו נתחיל</button>
@@ -39,71 +42,70 @@
         </div>
     </div>
     <!--TODO- Size of text's, mobile fit, creat one more class, button is jumping, Gender, refresh bug--> 
-    <div id="content" class="ContectContainer visually-hidden my-3 p-3 px-4 pt-5 my-5 text-center" style="background-color: #F6C362; margin-left: auto; margin-right: auto; height: 1000vh; width: 90%">
+    <div id="content" class="ContectContainer visually-hidden my-3 p-3 px-4 pt-5 my-5 text-center" style="background-color: #F6C362; margin-left: auto; margin-right: auto; width: 90%">
         <h1 style="font-weight:bold; font-size:2rem;"> שלום <span id="output"></span> </h1>
         <h1 style="font-size:1.5rem;"> הנה כמה נתונים שחשבנו שיעניינו אותך</h1>
         <div class="d-flex flex-row-reverse bd-highlight">
             <img class="container msgrightshort right" src="images/what is pension.png" alt="מהי קרן פנסיה?" style="height: auto; margin-top:5vh;" />
         </div>
         <div class="d-flex flex-row-reverse bd-highlight">
-            <img class="container revealleftHigh" src="images/firstanswernew.png" alt="קרן פנסיה הסבר" style="height: auto; margin-top: 5vh" />
+            <img class="container revealleftM" src="images/firstanswernew.png" alt="קרן פנסיה הסבר" style="height: auto; margin-top: 5vh" />
         </div>
-
-        <!--<div class="col-4" style=" transition-delay: 1s;">
-        <img class="container msgrightshort right" src="images/Gender.png" alt="מהו המין שלך" style="height: auto; margin-top:5vh; margin-right:25vw; width:75vw;" />
-        <div>-->
-        <div class="col-4 container msgrightshort right" style=" transition-delay: 1s; background-image: images/Gender.png">
-            src="images/Gender.png" alt="מהו המין שלך" style="height: auto; margin-top:5vh; margin-right:25vw; width:75vw;" />
-            <div>
-                <img id="man" onclick="man()" alt="גבר" src="images/man.png" />
-                <img id="woman" onclick="woman()" alt="אישה" src="images/woman.png" />
+        <div class="d-flex flex-row-reverse bd-highlight justify-content-center align-items-end " style="position: relative">
+            <img class="container msgrightlong" src="images/Gender.png" alt="מה משפיע על גובה הקצבה?" style="height: auto; margin-top: 5vh" />
+            <div id="ChooseGender" class="msgGender d-flex justify-content-center align-items-end max-">
+                <img id="man" class="genpic" onclick="man()" alt="גבר" src="images/man.png" />
+                <img id="woman" class="genpic" onclick="woman()" alt="אישה" src="images/woman.png" />
             </div>
         </div>
-        <div style="margin-bottom:5vh" id="DynamicImg" class="d-flex flex-row-reverse bd-highlight">
+     </div>
+        <div id="selectgender" class="visually-hidden" style="display:none">
+            <div style="margin-bottom:5vh;" id="DynamicImg" class="genchoice d-flex ">
 
-        </div>
-        <div class="d-flex flex-row-reverse bd-highlight">
-            <img class="container msgrightshort right" src="images/WhatIsRetairment.png" alt="מהו מסלול פרישה?" style="height: auto; margin-top: 5vh" />
-        </div>
-        <div class="d-flex flex-row-reverse bd-highlight">
-            <img class="container revealleft left" src="images/RetairmentAnswer.png" alt="מסלול פרישה הסבר" style="height: auto; margin-top: 5vh" />
-        </div>
 
-        <div class="d-flex flex-row-reverse bd-highlight">
-            <img class="container msgrightlong" src="images/Reasons.png" alt="מה משפיע על גובה הקצבה?" style="height: auto; margin-top: 5vh" />
-        </div>
-        <div class="d-flex flex-row-reverse bd-highlight">
-            <img class="container revealleftHigh" src="images/ReasonsAnswer.png" alt="גורמים שמשפיעים על גובה הקצבה הסבר" style="height: auto; margin-top: 5vh; width:40vw;" />
-        </div>
-        <div class="d-flex flex-row-reverse bd-highlight">
-            <img class="container msgrightlong" src="images/Note.png" alt="מהם שיקולים לבחירת מסלול פרישה?" style="height: auto; margin-top: 5vh" />
-        </div>
-        <div class="d-flex flex-row-reverse bd-highlight">
-            <img class="container revealleftHigh" src="images/NoteAnswer.png" alt="השיקולים בבחירת מסלול פרישה" style="height: auto; margin-top: 5vh" />
-        </div>
-        <div class="d-flex flex-row-reverse bd-highlight">
-            <img class="container msgrightshort" src="images/WhatToDo.png" alt="מה עליי לעשות כרגע?" style="height: auto; margin-top: 5vh" />
-        </div>
-        <div class="d-flex flex-row-reverse bd-highlight">
-            <img class="container revealleftHigh" src="images/WhatToDoAnswer1.png" alt="לברר היכן נמצאים הכספים" style="height: auto; margin-top: 5vh" />
-        </div>
-        <div class="d-flex flex-row-reverse bd-highlight">
-            <img class="container revealleftHigh" src="images/WhatToDoAnswer2.png" alt="לבחור מסלול פנסיוני" style="height: auto; margin-top: 5vh" />
-        </div>
-        <div class="d-flex flex-row-reverse bd-highlight">
-            <img class="container revealleftHigh" src="images/WhatToDoAnswer3.png" alt="תכנון פנסיוני לטווח ארוך" style="height: auto; margin-top: 5vh" />
-        </div>
-        <div class="d-flex flex-row-reverse bd-highlight">
-            <img class="container revealleftHigh" src="images/WhatToDoAnswer4.png" alt="להנות מהפ" style="height: auto; margin-top: 5vh" />
-        </div>
-        
-            <h3 style="color:brown"> WhatsApp sharing Link </h3>
+            </div>
+
+            <div class="d-flex flex-row-reverse bd-highlight" style="transition-delay: 2s;">
+                <img class="container msgrightshort" src="images/WhatIsRetairment.png" alt="מהו מסלול פרישה?" style="height: auto; margin-top: 5vh" />
+            </div>
+            <div class="d-flex flex-row-reverse bd-highlight">
+                <img class="container revealleftL" src="images/RetairmentAnswer.png" alt="מסלול פרישה הסבר" style="height: auto; margin-top: 5vh" />
+            </div>
+
+            <div class="d-flex flex-row-reverse bd-highlight">
+                <img class="container msgrightlong" src="images/Reasons.png" alt="מה משפיע על גובה הקצבה?" style="height: auto; margin-top: 5vh" />
+            </div>
+            <div class="d-flex flex-row-reverse bd-highlight">
+                <img class="container revealleftS" src="images/ReasonsAnswer.png" alt="גורמים שמשפיעים על גובה הקצבה הסבר" style="height: auto; margin-top: 5vh; width:40vw;" />
+            </div>
+            <div class="d-flex flex-row-reverse bd-highlight">
+                <img class="container msgrightlong" src="images/Note.png" alt="מהם שיקולים לבחירת מסלול פרישה?" style="height: auto; margin-top: 7vh" />
+            </div>
+            <div class="d-flex flex-row-reverse bd-highlight">
+                <img class="container revealleftM" src="images/NoteAnswer.png" alt="השיקולים בבחירת מסלול פרישה" style="height: auto; margin-top: 5vh" />
+            </div>
+            <div class="d-flex flex-row-reverse bd-highlight">
+                <img class="container msgrightshort" src="images/WhatToDo.png" alt="מה עליי לעשות כרגע?" style="height: auto; margin-top: 5vh" />
+            </div>
+            <div class="d-flex flex-row-reverse bd-highlight">
+                <img class="container revealleftM" src="images/WhatToDoAnswer1.png" alt="לברר היכן נמצאים הכספים" style="height: auto; margin-top: 5vh" />
+            </div>
+            <div class="d-flex flex-row-reverse bd-highlight">
+                <img class="container revealleftM" src="images/WhatToDoAnswer2.png" alt="לבחור מסלול פנסיוני" style="height: auto; margin-top: 5vh" />
+            </div>
+            <div class="d-flex flex-row-reverse bd-highlight">
+                <img class="container revealleftM" src="images/WhatToDoAnswer3.png" alt="תכנון פנסיוני לטווח ארוך" style="height: auto; margin-top: 5vh" />
+            </div>
+            <div class="d-flex flex-row-reverse bd-highlight">
+                <img class="container revealleftM" src="images/WhatToDoAnswer4.png" alt="להנות מהפרישה" style="height: auto; margin-top: 5vh" />
+            </div>
+
+            <br />
             <!-- create a link using anchor tab -->
-            <a href="whatsapp://send?text=http://localhost:50483/index.html" data-action="share/whatsapp/share"
-               target="_blank"> Share to WhatsApp </a>
+            <a href="whatsapp://send?text= רציתי לשתף אותך באתר מגניב שמסביר על דברים שחשוב לדעת לפני הפרישה  http://localhost:50483/index.html" data-action="share/whatsapp/share"
+               target="_blank"> <img style="width:25vw; height:auto" src="images/Share.png" /> </a>
 
-
+        </div>
     </div>
-    
 </body>
           </html>
