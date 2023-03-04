@@ -1,9 +1,13 @@
-﻿
+﻿@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@font-face {
+    font-family: 'Rubik', sans-serif;
+}
+/*scrolling props*/
 .container {
     -ms-overflow-style: none; /* Internet Explorer 10+ */
     scrollbar-width: none; /* Firefox */
 }
-
     .container::-webkit-scrollbar {
         display: none; /* Safari and Chrome */
     }
@@ -45,12 +49,23 @@
     overflow: hidden;
 }
 
+
+/*design props*/
+
+
 h1 {
     color: white;
     text-align: center;
     font-size: 1.25rem;
-    font-weight: 300
+    font-weight: 300;
+    font-family:Rubik;
 }
+
+p {
+    font-family: 'Rubik', sans-serif;
+}
+
+
 
 .btn btn-primary btn-lg px-4 gap-3:hover {
 background-color: #4CAF50; /* Green */
@@ -158,9 +173,10 @@ color: white;
             color: white;
             text-align: center;
             font-size: 0.75rem;
-            font-weight: 300
+            font-family: 'Rubik', sans-serif;
         }
     }
+    
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) {
         .BGimg {
@@ -171,7 +187,7 @@ color: white;
             color: white;
             text-align: center;
             font-size: 1rem;
-            font-weight: 300
+            font-family: 'Rubik', sans-serif;
         }
     }
     /* Medium devices (landscape tablets, 768px and up) */
@@ -184,7 +200,7 @@ color: white;
             color: white;
             text-align: center;
             font-size: 1.5rem;
-            font-weight: 300
+            font-family: 'Rubik', sans-serif;
         }
     }
     /* Large devices (laptops/desktops, 992px and up) */
@@ -197,7 +213,7 @@ color: white;
             color: white;
             text-align: center;
             font-size: 2rem;
-            font-weight: 300
+            font-family: 'Rubik', sans-serif;
         }
     }
     /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -211,7 +227,7 @@ color: white;
         color: white;
         text-align: center;
         font-size: 2.25rem;
-        font-weight: 300
+        font-family: 'Rubik', sans-serif;
     }
 
 }

@@ -1,6 +1,6 @@
 ﻿document.addEventListener("DOMContentLoaded", function (event) { });
 
-//saves the name of the user
+//saves the name of the user and show validation message
 function SaveName()
 {
     document.getElementById("output").innerHTML = " ";
@@ -53,8 +53,6 @@ function woman() {
             var elementVisible = 50;
             if (elementTop < windowHeight - elementVisible) {
                 reveals[i].classList.add("active");
-            } else {
-                reveals[i].classList.remove("active");
             }
         }
     }
